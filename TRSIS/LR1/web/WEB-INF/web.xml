@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>ServletZapis</servlet-name>
+        <servlet-class>ServletZapis</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletZapis</servlet-name>
+        <url-pattern>/zapis</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletView</servlet-name>
+        <servlet-class>ServletView</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletView</servlet-name>
+        <url-pattern>/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDelete</servlet-name>
+        <servlet-class>ServletDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDelete</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>Filter</filter-name>
+        <filter-class>Filter</filter-class>
+        <init-param>
+            <param-name>test-param</param-name>
+            <param-value>This parameter is for testing.</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>
